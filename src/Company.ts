@@ -7,6 +7,11 @@ export class Company {
     lat: number;
     lng: number;
   };
+  markerContent(): string {
+    return `<h1>Company Name: ${this.companyName} <h1>
+      <h3>${this.catchPhrase}</h3>
+    `;
+  }
 
   constructor() {
     this.companyName = faker.company.companyName();
